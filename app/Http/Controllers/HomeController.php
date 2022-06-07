@@ -33,7 +33,6 @@ class HomeController extends Controller
      */
     public function saveToken(Request $request)
     {
-        return $request;die;
         auth()->user()->update(['device_token'=>$request->token]);
         return response()->json(['token saved successfully.']);
     }
